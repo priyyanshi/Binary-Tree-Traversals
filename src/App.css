@@ -16,22 +16,9 @@
    text-decoration: none;
  }
 
- table {
-   table-layout: fixed;
+ .sidebar {
+   background-color: grey;
+   width: 40%;
+   height: 100%;
  }
 
-.children {
-  display: table-cell;
-  border-radius: 10px;
-  background-color: black;
-  color: white;
-  width: 45px;
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-
-.input_container {
-  width: 100%;
-  box-align: center;
-}
