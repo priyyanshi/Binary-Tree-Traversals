@@ -1,13 +1,13 @@
 import './App.css';
 import React, { Component } from 'react'
-import Search from './components/binary-search'
+import Canvas from './components/canvas/canvas'
 
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <Search/>
+        <Canvas/>
       </div>
     )
   }
