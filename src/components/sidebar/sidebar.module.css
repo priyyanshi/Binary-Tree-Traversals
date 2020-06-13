@@ -1,0 +1,17 @@
+.sidebar {
+    display: grid;
+    background-color: rgba(50,50,50,1);
+    position: absolute;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    box-shadow: 1px 0px 10px rgba(0,0,0,1);
+}
+ 
+  .box {
+    display: inline-grid;
+    background-color: red;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+  }
