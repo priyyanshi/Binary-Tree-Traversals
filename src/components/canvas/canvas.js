@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import p5 from 'p5'
 import Sidebar from '../sidebar/sidebar'
+import Styles from '../sidebar/sidebar.module.css'
 
 class Canvas extends Component{
     constructor(props) {
@@ -55,7 +56,10 @@ class Canvas extends Component{
         return (
             <div>
                 <div ref={this.myRef}></div>
-                <Sidebar/>
+                <div className={Styles.sidebar}>
+                    <Sidebar/>
+                </div>
+                
             </div>
         )
     }
