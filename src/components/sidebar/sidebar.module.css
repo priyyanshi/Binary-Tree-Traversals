@@ -90,20 +90,21 @@
   box-shadow: inset 0px 0px 20px rgba(0,0,0,0.5);
   overflow-y: scroll;
   overflow: auto;
+  height: 40vh;
 }
 
 .sideButtons {
   background-color: rgba(85,85,85,1);
   align-content: center;
   color: rgba(245,245,245,1);
-  padding: 16px;
-  font-size: 10px;
+  padding: 2vh;
+  font-size: 14px;
   border: none;
   cursor: pointer;
   width: 60%;
-  height: 20%;
+  height: 8vh;
   left: 20%;
-  margin-top: 10%;
+  margin-top: 2vh;
   outline: none!important;
   box-shadow: 0px 0px 3px rgba(0,0,0,1);
   transform: translate(50,50);
@@ -114,14 +115,14 @@
   background-color: rgba(85,85,85,1);
   align-content: center;
   color: rgba(245,245,245,1);
-  padding: 16px;
-  font-size: 10px;
+  padding: 2vh;
+  font-size: 14px;
   border: none;
   cursor: pointer;
   width: 25%;
-  height: 20%;
+  height: 10vh;
   left: 5%;
-  margin-top: 10%;
+  margin-top: 2vh;
   outline: none!important;
   box-shadow: 0px 0px 3px rgba(0,0,0,1);
   transform: translate(50,50);
@@ -135,4 +136,8 @@
   color: rgba(245,245,245,1);
   align-content: center;
   font-size: 12px;
+}
+
+.buttonsPanel {
+  height: 50vh;
 }
