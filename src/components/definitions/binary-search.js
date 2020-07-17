@@ -175,9 +175,5 @@ class BinaryTree extends Component{
 }  
 
 
-function minValueNode(node) {
-    if (node.right === null) return node
-    minValueNode(node.right)
-}
 
 export default BinaryTree;
