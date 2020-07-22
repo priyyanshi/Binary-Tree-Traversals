@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Styles from './sidebar.module.css'
 import Search from '../definitions/binary-search'
+import Binary from '../definitions/binary'
 import p5 from 'p5'
 import {BSTbuttons, BTbuttons, GRAbuttons} from './buttons'
 
@@ -84,7 +85,7 @@ class Sidebar extends Component {
             if (this.state.type === 'BST') {
                 this.allTraversals(p)
                 let level = this.state.SearchTree[this.state.index].levelorder()
-                for (var i=0; i<level.length; i++) {
+                for (let i=0; i<level.length; i++) {
                     if (level[i] !== null) {
                         p.fill(55,90,88)
                         p.rect(pos[i][0],pos[i][1],pos[i][2],pos[i][3])
@@ -95,9 +96,16 @@ class Sidebar extends Component {
                     }
                 }
             } else if (this.state.type === 'Binary'){
-                for (var j=0; j<pos.length; j++) {
-                    p.fill(100,50,55)
-                    p.rect(pos[j][0],pos[j][1],pos[j][2],pos[j][3])
+                let level = this.state.BinaryTree[this.state.index].levelorder()
+                for (let i=0; i<level.length; i++) {
+                    if (level[i] !== null) {
+                        p.fill(55,90,88)
+                        p.rect(pos[i][0],pos[i][1],pos[i][2],pos[i][3])
+                        p.fill(255)
+                        p.textSize(this.state.width/65)
+                        p.textAlign(p.CENTER,p.CENTER)
+                        p.text(level[i],pos[i][0] + 1/88*this.state.width,pos[i][1]+(1/40)*this.state.height)
+                    }
                 }
             } else if (this.state.type === 'Graph') {
                 p.fill(0,0,255)
@@ -182,7 +190,7 @@ class Sidebar extends Component {
     addBinaryTree() {
         this.setState(prevState => {
             var tree = prevState.BinaryTree 
-            let newTree = new Search()
+            let newTree = new Binary()
             tree.push(newTree)
             return {
                 BinaryTree : tree 
