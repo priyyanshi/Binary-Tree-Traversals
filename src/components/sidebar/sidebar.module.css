@@ -98,7 +98,7 @@
   align-content: center;
   color: rgba(245,245,245,1);
   padding: 2vh;
-  font-size: 14px;
+  font-size: 0.8vw;
   border: none;
   cursor: pointer;
   width: 60%;
@@ -116,7 +116,8 @@
   align-content: center;
   color: rgba(245,245,245,1);
   padding: 2vh;
-  font-size: 14px;
+  font-size: 0.8vw;
+  text-align: center;
   border: none;
   cursor: pointer;
   width: 25%;

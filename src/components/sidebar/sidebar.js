@@ -22,9 +22,9 @@ class Sidebar extends Component {
         super(props)
         this.state = { 
             SearchTree: [], 
-            Graph: [new Graph()],
+            Graph: [],
             index: 0,
-            type: 'Graph',
+            type: '',
             width: 0, 
             height: 0, 
             showBST: false,
@@ -223,26 +223,26 @@ class Sidebar extends Component {
 
     render() {
         let one = 0
-        let three = 0
+        // let three = 0
         var SearchComponents = this.state.SearchTree.map(tree => <EachPage type="BST" key={tree.state.id} val={one++} handleDisplay={this.handleDisplay}/>)
-        var GraphComponents = this.state.Graph.map(graph => <EachPage type="Graph" key={graph.state.id} val={three++} handleDisplay={this.handleDisplay}/>)
+        // var GraphComponents = this.state.Graph.map(graph => <EachPage type="Graph" key={graph.state.id} val={three++} handleDisplay={this.handleDisplay}/>)
 
         return (
             <div>
                 <div className={Styles.dropdown}>
-                    <button className={Styles.dropbtn}>+ Data Structures</button>
+                    <button className={Styles.dropbtn}>+ Modules</button>
                     <div className={Styles.dropdownContent}>
                         <button onClick={this.addSearchTree}>+ Binary Search Tree</button>
-                        <button onClick={this.addGraph}>+ Graphs</button>
+                        {/* <button onClick={this.addGraph}>+ Graphs</button> */}
                     </div>
                 </div>
                 <div className={Styles.scroll}>
                     {SearchComponents}
-                    {GraphComponents}
+                    {/* {GraphComponents} */}
                 </div>
                 <div className={Styles.buttonsPanel}>
                     <BSTbuttons state={this.state} />
-                    <GRAbuttons state={this.state} />
+                    {/* <GRAbuttons state={this.state} /> */}
                 </div>
                 
             </div>
