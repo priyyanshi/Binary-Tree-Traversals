@@ -16,19 +16,53 @@ function EachPage(props) {
     ) 
 }
 
+var temp = new Search()
+temp.insert(60)
+temp.insert(30)
+temp.insert(90)
+temp.insert(15)
+temp.insert(45)
+temp.insert(75)
+temp.insert(115)
+temp.insert(7)
+temp.insert(20)
+temp.insert(40)
+temp.insert(56)
+temp.insert(70)
+temp.insert(80)
+temp.insert(100)
+temp.insert(120)
+temp.insert(3)
+temp.insert(8)
+temp.insert(16)
+temp.insert(25)
+temp.insert(35)
+temp.insert(43)
+temp.insert(50)
+temp.insert(58)
+temp.insert(65)
+temp.insert(72)
+temp.insert(77)
+temp.insert(85)
+temp.insert(95)
+temp.insert(105)
+temp.insert(117)
+temp.insert(125)
+
+
 class Sidebar extends Component {
 
     constructor(props) {
         super(props)
         this.state = { 
-            SearchTree: [], 
+            SearchTree: [temp], 
             Graph: [],
             index: 0,
-            type: '',
+            type: 'BST',
             width: 0, 
             height: 0, 
-            showBST: false,
-            showGRA: true, 
+            showBST: true,
+            showGRA: false, 
             go: true,
         }
         
@@ -44,38 +78,72 @@ class Sidebar extends Component {
 
         p.draw = () => {
             p.background(0,0,0,0)
-            var pos =  [[16/44*this.state.width,(2/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [8/44*this.state.width,(4/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [24/44*this.state.width,(4/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [4/44*this.state.width,(6/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [12/44*this.state.width,(6/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [20/44*this.state.width,(6/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [28/44*this.state.width,(6/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [2/44*this.state.width,(8/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [6/44*this.state.width,(8/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [10/44*this.state.width,(8/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [14/44*this.state.width,(8/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [18/44*this.state.width,(8/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [22/44*this.state.width,(8/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [26/44*this.state.width,(8/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [30/44*this.state.width,(8/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [1/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [3/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [5/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [7/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [9/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [11/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [13/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [15/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [17/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [19/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [21/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [23/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [25/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [27/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [29/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],
-                        [31/44*this.state.width,(10/20)*this.state.height,this.state.width/44, this.state.height/20],]
+            var pos =  [[16/44*this.state.width,(1/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [8/44*this.state.width,(3/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [24/44*this.state.width,(3/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [4/44*this.state.width,(5/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [12/44*this.state.width,(5/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [20/44*this.state.width,(5/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [28/44*this.state.width,(5/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [2/44*this.state.width,(7/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [6/44*this.state.width,(7/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [10/44*this.state.width,(7/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [14/44*this.state.width,(7/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [18/44*this.state.width,(7/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [22/44*this.state.width,(7/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [26/44*this.state.width,(7/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [30/44*this.state.width,(7/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [1/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [3/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [5/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [7/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [9/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [11/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [13/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [15/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [17/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [19/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [21/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [23/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [25/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [27/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [29/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],
+                        [31/44*this.state.width,(9/20)*this.state.height,this.state.width/44, this.state.height/20],]
 
+            let x_mod = this.state.width/44
+            let y_mod = this.state.height/20
+            var lines = [[],
+                        [9*x_mod, 2*y_mod, 9*x_mod, 3*y_mod, 9*x_mod, 2*y_mod, 16*x_mod, 2*y_mod],
+                        [24*x_mod, 2*y_mod, 24*x_mod, 3*y_mod, 17*x_mod, 2*y_mod, 24*x_mod, 2*y_mod],
+                        [5*x_mod, 4*y_mod, 5*x_mod, 5*y_mod, 5*x_mod, 4*y_mod, 8*x_mod, 4*y_mod],
+                        [12*x_mod, 4*y_mod, 12*x_mod, 5*y_mod, 9*x_mod, 4*y_mod, 12*x_mod, 4*y_mod],
+                        [21*x_mod, 4*y_mod, 21*x_mod, 5*y_mod, 21*x_mod, 4*y_mod, 24*x_mod, 4*y_mod],
+                        [28*x_mod, 4*y_mod, 28*x_mod, 5*y_mod, 25*x_mod, 4*y_mod, 28*x_mod, 4*y_mod],
+                        [3*x_mod, 6*y_mod, 3*x_mod, 7*y_mod, 3*x_mod, 6*y_mod, 4*x_mod, 6*y_mod],
+                        [6*x_mod, 6*y_mod, 6*x_mod, 7*y_mod, 5*x_mod, 6*y_mod, 6*x_mod, 6*y_mod],
+                        [11*x_mod, 6*y_mod, 11*x_mod, 7*y_mod, 11*x_mod, 6*y_mod, 12*x_mod, 6*y_mod],
+                        [14*x_mod, 6*y_mod, 14*x_mod, 7*y_mod, 13*x_mod, 6*y_mod, 14*x_mod, 6*y_mod],
+                        [19*x_mod, 6*y_mod, 19*x_mod, 7*y_mod, 19*x_mod, 6*y_mod, 20*x_mod, 6*y_mod],
+                        [22*x_mod, 6*y_mod, 22*x_mod, 7*y_mod, 22*x_mod, 6*y_mod, 21*x_mod, 6*y_mod],
+                        [27*x_mod, 6*y_mod, 27*x_mod, 7*y_mod, 27*x_mod, 6*y_mod, 28*x_mod, 6*y_mod],
+                        [30*x_mod, 6*y_mod, 30*x_mod, 7*y_mod, 29*x_mod, 6*y_mod, 30*x_mod, 6*y_mod],
+                        [2*x_mod, 8*y_mod, 2*x_mod, 10*y_mod],
+                        [3*x_mod, 8*y_mod, 3*x_mod, 10*y_mod],
+                        [6*x_mod, 8*y_mod, 6*x_mod, 10*y_mod],
+                        [7*x_mod, 8*y_mod, 7*x_mod, 10*y_mod],
+                        [10*x_mod, 8*y_mod, 10*x_mod, 9*y_mod],
+                        [11*x_mod, 8*y_mod, 11*x_mod, 9*y_mod],
+                        [14*x_mod, 8*y_mod, 14*x_mod, 9*y_mod],
+                        [15*x_mod, 8*y_mod, 15*x_mod, 9*y_mod],
+                        [18*x_mod, 8*y_mod, 18*x_mod, 9*y_mod],
+                        [19*x_mod, 8*y_mod, 19*x_mod, 9*y_mod],
+                        [22*x_mod, 8*y_mod, 22*x_mod, 9*y_mod],
+                        [23*x_mod, 8*y_mod, 23*x_mod, 9*y_mod],
+                        [26*x_mod, 8*y_mod, 26*x_mod, 9*y_mod],
+                        [27*x_mod, 8*y_mod, 27*x_mod, 9*y_mod],
+                        [30*x_mod, 8*y_mod, 30*x_mod, 9*y_mod],
+                        [31*x_mod, 8*y_mod, 31*x_mod, 9*y_mod]]
+            
             let cnv = p.createCanvas(0.75*this.state.width,this.state.height)
             cnv.position(this.state.width*0.25,0)
             
@@ -85,13 +153,24 @@ class Sidebar extends Component {
                 for (let i=0; i<level.length; i++) {
                     if (level[i] !== null) {
                         p.push()
-                        p.fill(55,90,88)
+                        p.strokeWeight(4)
+                        p.stroke(65,65,65,255)
+                        p.fill(65,65,65)
                         p.rect(pos[i][0],pos[i][1],pos[i][2],pos[i][3])
                         p.fill(255)
-                        p.textSize(this.state.width/65)
+                        p.textSize(this.state.width/100)
                         p.textAlign(p.CENTER,p.CENTER)
                         p.text(level[i],pos[i][0] + 1/88*this.state.width,pos[i][1]+(1/40)*this.state.height)
                         p.pop()
+
+                        for (let j = 0; j <= lines[i].length+1; j+=4) {
+                            console.log(i)
+                            p.push()
+                            p.strokeWeight(4)
+                            p.stroke(65,65,65,255)
+                            p.line(lines[i][j], lines[i][j+1], lines[i][j+2], lines[i][j+3])
+                            p.pop()
+                        }
                     }
                 }
             } else if (this.state.type === 'Graph') {
@@ -144,15 +223,15 @@ class Sidebar extends Component {
 
     allTraversals(p) {
         p.fill(245)
-        p.textSize(this.state.width/85)
+        p.textSize(this.state.width/100)
         p.textAlign(p.CENTER,p.CENTER)
-        p.rect(2/44*this.state.width,(14/20)*this.state.height,this.state.width*(3/44), this.state.height/20)
-        p.rect(2/44*this.state.width,(16/20)*this.state.height,this.state.width*(3/44), this.state.height/20)
-        p.rect(2/44*this.state.width,(18/20)*this.state.height,this.state.width*(3/44), this.state.height/20)
+        p.rect(2/88*this.state.width,(11/20)*this.state.height,this.state.width*(12/172), this.state.height/20)
+        p.rect(2/88*this.state.width,(14/20)*this.state.height,this.state.width*(12/172), this.state.height/20)
+        p.rect(2/88*this.state.width,(17/20)*this.state.height,this.state.width*(12/172), this.state.height/20)
         p.fill(25)
-        p.text('Preorder:',(7/88)*this.state.width,(29/40)*this.state.height)
-        p.text('Postorder:',(7/88)*this.state.width,(33/40)*this.state.height)
-        p.text('Inorder:',(7/88)*this.state.width,(37/40)*this.state.height)
+        p.text('Preorder:',(10/172)*this.state.width,(23/40)*this.state.height)
+        p.text('Postorder:',(10/172)*this.state.width,(29/40)*this.state.height)
+        p.text('Inorder:',(10/172)*this.state.width,(35/40)*this.state.height)
 
         let prearray = []
         let postarray = []
@@ -164,13 +243,13 @@ class Sidebar extends Component {
         
         for (let i=0; i< prearray.length; i++) {
             p.fill(0)
-            p.rect((5+i)/44*this.state.width,(14/20)*this.state.height,this.state.width*(1/44), this.state.height/20)
-            p.rect((5+i)/44*this.state.width,(16/20)*this.state.height,this.state.width*(1/44), this.state.height/20)
-            p.rect((5+i)/44*this.state.width,(18/20)*this.state.height,this.state.width*(1/44), this.state.height/20)
+            p.rect((1+i)/44*this.state.width,(12/20)*this.state.height,this.state.width*(1/44), this.state.height/20)
+            p.rect((1+i)/44*this.state.width,(15/20)*this.state.height,this.state.width*(1/44), this.state.height/20)
+            p.rect((1+i)/44*this.state.width,(18/20)*this.state.height,this.state.width*(1/44), this.state.height/20)
             p.fill(255)
-            p.text(prearray[i],((11+i*2)/88)*this.state.width,(29/40)*this.state.height)
-            p.text(postarray[i],((11+i*2)/88)*this.state.width,(33/40)*this.state.height)
-            p.text(inarray[i],((11+i*2)/88)*this.state.width,(37/40)*this.state.height)
+            p.text(prearray[i],((3+i*2)/88)*this.state.width,(25/40)*this.state.height)
+            p.text(postarray[i],((3+i*2)/88)*this.state.width,(31/40)*this.state.height)
+            p.text(inarray[i],((3+i*2)/88)*this.state.width,(37/40)*this.state.height)
         }
         
     }
