@@ -58,7 +58,7 @@ class Sidebar extends Component {
             SearchTree: [temp], 
             Graph: [],
             index: 0,
-            type: 'BST',
+            type: 'Binary Search Tree',
             width: 0, 
             height: 0, 
             showBST: true,
@@ -147,7 +147,7 @@ class Sidebar extends Component {
             let cnv = p.createCanvas(0.75*this.state.width,this.state.height)
             cnv.position(this.state.width*0.25,0)
             
-            if (this.state.type === 'BST') {
+            if (this.state.type === 'Binary Search Tree') {
                 this.allTraversals(p)
                 let level = this.state.SearchTree[this.state.index].levelorder()
                 for (let i=0; i<level.length; i++) {
@@ -271,7 +271,7 @@ class Sidebar extends Component {
     handleDisplay(props) {
         this.setState({type: props.type})
         this.setState({index: props.val})
-        if (props.type === 'BST') {
+        if (props.type === 'Binary Search Tree') {
             this.setState({showBST: true, showGRA: false})
         } else if (props.type === 'Graph') {
             this.setState({showBST: false, showGRA: true})
@@ -303,7 +303,7 @@ class Sidebar extends Component {
     render() {
         let one = 0
         // let three = 0
-        var SearchComponents = this.state.SearchTree.map(tree => <EachPage type="BST" key={tree.state.id} val={one++} handleDisplay={this.handleDisplay}/>)
+        var SearchComponents = this.state.SearchTree.map(tree => <EachPage type="Binary Search Tree" key={tree.state.id} val={one++} handleDisplay={this.handleDisplay}/>)
         // var GraphComponents = this.state.Graph.map(graph => <EachPage type="Graph" key={graph.state.id} val={three++} handleDisplay={this.handleDisplay}/>)
 
         return (

@@ -26,12 +26,12 @@ class Canvas extends Component{
             let x_offset = this.state.width/44
             let y_offset = this.state.height/20
             for (var x = 0; x <this.state.width; x=x+x_offset){
-                p.stroke(100)
+                p.stroke(73,137,201)
                 p.line(x,0,x,this.state.height)  
             }
 
             for (var y = 0; y <this.state.width; y=y+y_offset){
-                p.stroke(100)
+                p.stroke(73,137,201)
                 p.line(0,y,this.state.width,y)  
             }
             
