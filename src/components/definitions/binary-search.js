@@ -16,8 +16,11 @@ class BinaryTree extends Component{
             preorder: [],
             postorder: [],
             inorder: [],
+            tooTall: false
         }
         this.root = null
+        this.insert = this.insert.bind(this)
+        this.insertNode = this.insertNode.bind(this)
     }
 
     insert(num) {
@@ -27,10 +30,17 @@ class BinaryTree extends Component{
         } else  {
             this.insertNode(this.root, newNode)
         }
+
+        let height = this.findHeight(this.root)
+        if (height >= 6) {
+            this.delete(num)
+            this.setState({tooTall: true})
+            console.log("Cannot increase the height of tree more than 5!")
+        }
+
     }
 
     insertNode(node, newNode){
-
         var root = node.num;
         var newN = newNode.num;
         if ( root > newN) {
@@ -153,6 +163,14 @@ class BinaryTree extends Component{
         }
         return order
 
+    }
+
+    findHeight(root) {
+        if (root === null) {
+            return 0
+        }
+
+        return Math.max(this.findHeight(root.left), this.findHeight(root.right)) + 1
     }
     
     clear() {

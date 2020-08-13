@@ -18,6 +18,9 @@ class BSTbuttons extends Component {
         if (parseInt(this.state.text)) {
             this.props.state.SearchTree[this.props.state.index].insert(parseInt(this.state.text))
             document.getElementById('addNode').value = null
+            if (this.props.state.SearchTree[this.props.state.index].state.tooTall) {
+                console.log("too telll fam")
+            }
         } else {
             console.log("Must enter a number!")
         }
