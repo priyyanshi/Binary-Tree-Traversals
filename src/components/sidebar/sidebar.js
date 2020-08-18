@@ -208,7 +208,7 @@ class Sidebar extends Component {
 
     allTraversals(p) {
         p.fill(245)
-        p.textSize(this.state.width/100)
+        p.textSize(this.state.width/90)
         p.textAlign(p.CENTER,p.CENTER)
         p.rect(2/88*this.state.width,(11/20)*this.state.height,this.state.width*(12/172), this.state.height/20)
         p.rect(2/88*this.state.width,(14/20)*this.state.height,this.state.width*(12/172), this.state.height/20)
