@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Data-structures-and-algos/static/css/main.4625d086.chunk.css",
+    "main.js": "/Data-structures-and-algos/static/js/main.f63c6036.chunk.js",
+    "main.js.map": "/Data-structures-and-algos/static/js/main.f63c6036.chunk.js.map",
+    "runtime-main.js": "/Data-structures-and-algos/static/js/runtime-main.e475e4c9.js",
+    "runtime-main.js.map": "/Data-structures-and-algos/static/js/runtime-main.e475e4c9.js.map",
+    "static/css/2.26884a19.chunk.css": "/Data-structures-and-algos/static/css/2.26884a19.chunk.css",
+    "static/js/2.a5c72ce7.chunk.js": "/Data-structures-and-algos/static/js/2.a5c72ce7.chunk.js",
+    "static/js/2.a5c72ce7.chunk.js.map": "/Data-structures-and-algos/static/js/2.a5c72ce7.chunk.js.map",
+    "index.html": "/Data-structures-and-algos/index.html",
+    "precache-manifest.e07454a77254791e547964c7a5fda738.js": "/Data-structures-and-algos/precache-manifest.e07454a77254791e547964c7a5fda738.js",
+    "service-worker.js": "/Data-structures-and-algos/service-worker.js",
+    "static/css/2.26884a19.chunk.css.map": "/Data-structures-and-algos/static/css/2.26884a19.chunk.css.map",
+    "static/css/main.4625d086.chunk.css.map": "/Data-structures-and-algos/static/css/main.4625d086.chunk.css.map",
+    "static/js/2.a5c72ce7.chunk.js.LICENSE.txt": "/Data-structures-and-algos/static/js/2.a5c72ce7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e475e4c9.js",
+    "static/css/2.26884a19.chunk.css",
+    "static/js/2.a5c72ce7.chunk.js",
+    "static/css/main.4625d086.chunk.css",
+    "static/js/main.f63c6036.chunk.js"
+  ]
+}
